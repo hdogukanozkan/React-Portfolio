@@ -113,7 +113,7 @@ const Skills = () => {
   return (
     <div className="max-w-6xl mx-auto">
       <h2 className="text-center text-5xl mb-0 font-bold">My Skills</h2>
-      <div className="flex flex-col lg:flex-row gap-2">
+      <div className="flex flex-col-reverse lg:flex-row gap-0">
         <section className="flex-1 w-full">
           <img
             src={logoTest}
@@ -122,9 +122,11 @@ const Skills = () => {
             alt=""
           />
         </section>
-        <section className="flex-1 lg:mt-10 w-full h-full">
-          <h2 className="text-5xl font-bold mb-6">Front end Developer</h2>
-          <div className="flex gap-4 flex-wrap mb-4 justify-center lg:justify-start">
+        <section className="flex-1 mt-6 lg:mt-10 w-full h-full">
+          <h2 className="text-3xl text-center lg:text-start lg:text-5xl font-bold mb-6">
+            Front end Developer
+          </h2>
+          <div className="flex gap-2 lg:gap-4 flex-wrap mb-4 justify-center lg:justify-start">
             {obj.map((data, index) => (
               <>
                 {data.resim ? (

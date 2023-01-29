@@ -38,7 +38,7 @@ const Navbar = () => {
       <ul
         className={`${
           menuActive ? "max-h-0 lg:max-h-52" : "max-h-[600px]"
-        } navbar`}
+        } menu`}
       >
         {menu.map((data, index) => (
           <Fragment key={index}>
@@ -46,12 +46,12 @@ const Navbar = () => {
               //
               data.img ? (
                 <li
-                  className="mb-3 lg:mb-0 ml-0 my-2 lg:my-0 lg:ml-1 px-3 py-1 relative transition rounded-full  cursor-pointer "
+                  className="btn-darkMode"
                   key={index}
                   onClick={() =>
                     data.name === "Dark Mode"
                       ? handleDarkMode()
-                      : console.log(data)
+                      : console.log("")
                   }
                 >
                   {data.img}
@@ -59,7 +59,7 @@ const Navbar = () => {
               ) : (
                 <Link to={data.link}>
                   <li
-                    className={"btn"}
+                    className={"btn-link"}
                     key={index}
                     onClick={() =>
                       data.name === "Dark Mode"

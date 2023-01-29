@@ -3,9 +3,9 @@ import { GiAncientSword } from "react-icons/gi";
 
 const Footer = () => {
   return (
-    <footer className="select-none w-full font-bold text-xl py-4 flex items-center justify-center">
+    <footer className="footbar">
       Created by H.DoğukanÖzkan @2023{" "}
-      <GiAncientSword className="ml-2 text-5xl " />
+      <GiAncientSword className="ml-2 text-3xl lg:text-5xl" />
     </footer>
   );
 };

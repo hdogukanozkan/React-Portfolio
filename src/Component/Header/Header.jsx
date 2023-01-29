@@ -19,7 +19,7 @@ const Header = () => {
           onClick={() => {
             dispatch(menuOpen());
           }}
-          className="lg:hidden cursor-pointer "
+          className="burger-menu "
         >
           <HiMenu size={35} />
         </span>

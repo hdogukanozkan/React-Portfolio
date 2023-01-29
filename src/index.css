@@ -19,28 +19,62 @@ hover:  bg-lime-600
     @apply bg-gray-700 text-gray-100 min-h-[100vh] dark:bg-gray-300 dark:text-stone-800 transition duration-100;
   }
 
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Header Components */
   .header {
-    @apply relative flex flex-col justify-between gap-4 items-center py-5 px-2 lg:flex-row lg:px-8 select-none;
+    @apply relative flex flex-col justify-between gap-4 items-center py-5 px-3 lg:flex-row lg:px-8 select-none;
   }
 
   .logo {
     @apply w-full flex justify-between items-center lg:block lg:w-auto;
   }
 
-  .navbar {
-    @apply transition-[max-height] duration-500 lg:transition-none h-auto overflow-hidden w-full flex flex-col lg:flex-row gap-2 lg:w-auto lg:py-1 lg:px-3;
+  .burger-menu {
+    -webkit-tap-highlight-color: transparent;
+    @apply lg:hidden cursor-pointer;
   }
 
+  /* Navbar Component */
   .nav {
     @apply w-full lg:w-auto;
   }
 
-  .btn {
-    @apply w-full lg:w-auto px-2 lg:px-6 py-1 cursor-pointer flex items-center justify-center;
+  .menu {
+    @apply transition-[max-height] duration-500 lg:transition-none h-auto overflow-hidden w-full flex flex-col lg:flex-row gap-2 lg:w-auto lg:py-1 lg:px-3 lg:gap-4;
   }
 
+  .btn-link {
+    -webkit-tap-highlight-color: transparent;
+    @apply w-full lg:w-auto px-2 lg:px-4 py-1 cursor-pointer flex items-center justify-center relative;
+  }
+
+  .btn-link:before {
+    content: "";
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+    @apply absolute w-full h-[2px] -bottom-1 left-0 bg-white dark:bg-gray-800 invisible;
+  }
+
+  .btn-link:hover:before {
+    transform: scaleX(1);
+    @apply visible;
+  }
+
+  .btn-darkMode {
+    -webkit-tap-highlight-color: transparent;
+    @apply mb-3 lg:mb-0 ml-0 my-2 lg:my-0 lg:ml-1 px-3 py-1 relative transition rounded-full  cursor-pointer;
+  }
+
+  /*  DarkMode ICON hover effeckt: ;*/
   .lamb {
     @apply p-2 filter hover:drop-shadow-3xl lg:text-[3.35rem] text-white dark:text-gray-700 absolute text-5xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  /*  Footer */
+  .footbar {
+    @apply select-none w-full font-bold text-base mt-4 py-2 lg:py-4 lg:text-lg flex items-center justify-center;
   }
 }

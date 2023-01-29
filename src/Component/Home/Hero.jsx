@@ -9,7 +9,9 @@ const Hero = () => {
   return (
     <div className="flex flex-col items-center lg:flex-row gap-2 max-w-6xl mx-auto">
       <div className="flex-1 flex flex-col gap-4 items-start">
-        <h1 className="text-5xl font-bold">Hi there, 👋🏻.</h1>
+        <h1 className="text-3xl w-full flex justify-center items-center lg:justify-start lg:items-start lg:text-5xl font-bold">
+          Hi there, 👋🏻.
+        </h1>
         <p className="text-lg">
           I am{" "}
           <span className="text-lime-400 dark:text-lime-700 font-bold">
